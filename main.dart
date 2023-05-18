@@ -1,15 +1,32 @@
+import 'dart:math';
+
 void main() {
-  final phones = <String>['Nokia', 'Xiaomi', 'iPhone'];
+  final numbers = List.generate(10, (index) {
+    final random = Random();
+    return random.nextInt(100);
+  });
 
-  print(phones);
-  print(
-      '${identityHashCode(phones[0])} - ${identityHashCode(phones[1])} - ${identityHashCode(phones[2])}');
+  print(numbers);
 
-  // viết code ở đây, đổi vị trí Xiaomi và iPhone
-  phones.add(phones[1]);
-  phones.removeAt(1);
+  var min = 100;
+  var max = 0;
 
-  print(phones);
-  print(
-      '${identityHashCode(phones[0])} - ${identityHashCode(phones[1])} - ${identityHashCode(phones[2])}');
+  for (var i in numbers) {
+    if (i >= max) max = i;
+    if (i <= min) min = i;
+  }
+
+  print('min $min max $max');
+}
+
+int giaithua(int number) {
+  if (number < 1) {
+    throw Exception('must be > 0');
+  }
+
+  int result = 1;
+  for (var i = 1; i < number; i++) {
+    result *= i;
+  }
+  return result;
 }
