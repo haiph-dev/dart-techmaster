@@ -1,6 +1,26 @@
+import 'dart:math';
+
 void main() {
-  print(giaithua(5));
+  final numbers = List.generate(10, (index) {
+    final random = Random();
+    return random.nextInt(100);
+  });
+
+  print(numbers);
+
+  var min = 100;
+  var max = 0;
+
+  for (var i in numbers) {
+    if (i >= max) max = i;
+    if (i <= min) min = i;
+  }
+
+  print('min $min max $max');
 }
+
+//sort min to max
+//sort max to min
 
 int giaithua(int number) {
   if (number < 1) {
