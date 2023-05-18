@@ -5,7 +5,7 @@ void main() {
 int giaithua(int number) {
   int result = 1;
   for (var i = 1; i < number; i++) {
-    result = result * i;
+    result *= i;
   }
   return result;
 }
