@@ -9,6 +9,7 @@ void main() {
   phones.add(phones[1]);
   phones.removeAt(1);
 
+  //---------------
   print(phones);
   print(
       '${identityHashCode(phones[0])} - ${identityHashCode(phones[1])} - ${identityHashCode(phones[2])}');
