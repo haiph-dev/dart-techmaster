@@ -17,12 +17,16 @@ class Device extends Manufacturer {
   late String systemName;
 
   Device(this.devName, this.systemName);
+
+  void show() {
+    print(name);
+    print(manuID);
+    print(devName);
+    print(systemName);
+  }
 }
 
 void main() {
   final device = Device('dev0', 'linux');
-  print(device.name);
-  print(device.manuID);
-  print(device.devName);
-  print(device.systemName);
+  device.show();
 }
